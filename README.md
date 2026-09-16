@@ -43,63 +43,6 @@ Agent
   |
   v
 Diagnosis
-
-
-
-## Example
-
-The simulated pipeline contains a Snowflake load failure caused by a schema mismatch.
-
-```text
-Source:
-age = integer
-
-Target:
-age = string
-
-
-Agent Decision:
-compare_schema
-
-Tool Result:
-age → source = integer, target = string
-
-Diagnosis:
-Schema mismatch detected.
-
-Recommendation:
-Fix the schema mismatch before retrying the load.
-
-
-Knowledge Documents
-        |
-        v
-     Embeddings
-        |
-        v
-   Vector Store
-        |
-        v
- Similarity Search
-        |
-        v
-Relevant Knowledge
-        |
-        v
-      Agent
-
-
-### Then do these 3 things:
-
-**1.** Click **Preview** at the top and check that it looks properly formatted.
-
-**2.** Click **Commit changes...** at the top-right.
-
-**3.** In the commit window:
-- Keep **Commit directly to the `main` branch**
-- Commit message:
-  ```text
-  Improve project documentation
   |
   v
 Recommended Action
